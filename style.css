@@ -1,0 +1,7 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif; }
+body { background:#f8f9ff; color:#333; line-height:1.6; }
+header { background:linear-gradient(135deg,#667eea,#764ba2); color:white; padding:60px 20px; text-align:center; }
+header h1 { font-size:42px; margin-bottom:10px; }
+section { max-width:900px; margin:40px auto; background:white; padding:30px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1); }
+h2 { color:#667eea; margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:10px; }
+footer { text-align:center; padding:20px; background:#333; color:white; margin-top:40px; }
