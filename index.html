@@ -2,16 +2,15 @@
 <html>
 <head>
 <title>D Manasa - Portfolio</title>
-<link rel="stylesheet" href="style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{font-family:Arial; margin:0; padding:20px; background:#f5f5f5;}
+.card{background:white; border:1px solid #ccc; padding:12px; border-radius:8px; box-shadow:2px 2px 6px #999; width:150px;}
+</style>
 </head>
 <body>
-<header>
-<h1>D Manasa</h1>
+
+<h1>D Manasa - Portfolio</h1>
 <p>GATE Aspirant | C Coder | Web Developer</p>
-<p>Learning C + Web Dev Daily</p>
-<a href="#contact">Contact Me</a>
-</header>
 
 <section>
 <h2>My Skills</h2>
@@ -25,15 +24,9 @@
 <section style="background:#e6f2ff; padding:20px; border-radius:12px;">
 <h2>My Projects</h2>
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
-<div style="background:white; border:1px solid #ccc; padding:12px; border-radius:8px; box-shadow:2px 2px 6px #999;">
-<b>Sum Calculator</b><br>C language
-</div>
-<div style="background:white; border:1px solid #ccc; padding:12px; border-radius:8px; box-shadow:2px 2px 6px #999;">
-<b>Portfolio Website</b><br>HTML/CSS Live
-</div>
-<div style="background:white; border:1px solid #ccc; padding:12px; border-radius:8px; box-shadow:2px 2px 6px #999;">
-<b>Even/Odd Sum</b><br>2550 & 2500
-</div>
+<div class="card"><b>Sum Calculator</b><br>C language</div>
+<div class="card"><b>Portfolio Website</b><br>HTML/CSS Live</div>
+<div class="card"><b>Even/Odd Sum</b><br>2550 & 2500</div>
 </div>
 </section>
 
@@ -41,45 +34,22 @@
 <h2>Contact Me</h2>
 <input type="email" id="email" placeholder="Enter your email" style="padding:8px; width:250px;">
 <button onclick="contactMe()" style="padding:8px 15px; background:blue; color:white; border:none; border-radius:6px; cursor:pointer;">Contact Me</button>
+<p>Email: dmanasa181@gmail.com</p>
+<p><a href="https://github.com/dmanasa381-hub">GitHub</a> | <a href="#">LinkedIn</a></p>
 </section>
+
+<footer style="text-align:center; margin-top:20px;">© 2026 D Manasa - Built with ❤️</footer>
 
 <script>
 function contactMe(){
- var email = document.getElementById("email").value;
- if(email == ""){
+ var email=document.getElementById("email").value;
+ if(email==""){
    alert("Enter email");
  } else {
-   alert("Thanks for contacting! I will reply to " + email);
+   alert("Thanks for contacting Manasa! I'll reply soon ❤️ to " + email);
  }
 }
 </script>
-</script>
-  </div>
-  <div style="background:white; border:1px solid #ccc; padding:12px; border-radius:8px; box-shadow:2px 2px 6px #999;">
-    <b>Portfolio Website</b><br>HTML/CSS Live
-  </div>
-  <div style="background:white; border:1px solid #ccc; padding:12px; border-radius:8px; box-shadow:2px 2px 6px #999;">
-    <b>Even/Odd Sum</b><br>2550 & 2500
-  </div>
-</div>
-</section>
 
-function contactMe(){
-  alert("Thanks for contacting Manasa! I'll reply soon ❤️");
-}
-  <script>
-function contactMe(){
- alert("Thanks for contacting Manasa! I'll reply soon ❤️");
-}
-</script>
-
-<section id="contact">
-<h2>Contact Me</h2>
-<p>Email: dmanasa181@gmail.com</p>
-<button onclick="contactMe()" style="background:#6A11CB; color:white; padding:10px 20px; border:none; border-radius:8px; cursor:pointer;">Contact Me</button>
-<p><a href="https://github.com/dmanasa181-hub">GitHub</a> | <a href="#">LinkedIn</a></p>
-</section>
-
-<footer>© 2026 D Manasa - Built with ❤️</footer>
 </body>
 </html>
