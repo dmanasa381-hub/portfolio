@@ -27,6 +27,7 @@ body{font-family:Arial; margin:0; padding:20px; background:#f5f5f5;}
 <div class="card"><b>Sum Calculator</b><br>C language</div>
 <div class="card"><b>Portfolio Website</b><br>HTML/CSS Live</div>
 <div class="card"><b>Even/Odd Sum</b><br>2550 & 2500</div>
+<div class="card"><b>Palindrome Checker</b><br>Day 13 - Strings<br><input id="word" placeholder="Enter word - madam" style="padding:8px; width:90%; margin:5px 0; border-radius:6px; border:1px solid #ccc;"><br><button onclick="checkPal()" style="padding:8px 15px; background:blue; color:white; border:none; border-radius:6px; cursor:pointer;">Check</button><p id="palOut" style="font-weight:bold;"></p></div>
 </div>
 </section>
 
@@ -48,6 +49,21 @@ function contactMe(){
  } else {
    alert("Thanks for contacting Manasa! I'll reply soon ❤️ to " + email);
  }
+}
+function checkPal(){
+  var s = document.getElementById("word").value.toLowerCase().trim();
+  var rev = s.split("").reverse().join("");
+  if(s == ""){
+    document.getElementById("palOut").innerText = "Please enter a word!";
+    return;
+  }
+  if(s == rev){
+    document.getElementById("palOut").innerText = "Reversed: " + rev + " - Palindrome ✅";
+    document.getElementById("palOut").style.color = "green";
+  } else {
+    document.getElementById("palOut").innerText = "Reversed: " + rev + " - Not Palindrome ❌";
+    document.getElementById("palOut").style.color = "red";
+  }
 }
 </script>
 
