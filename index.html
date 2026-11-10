@@ -28,6 +28,7 @@ body{font-family:Arial; margin:0; padding:20px; background:#f5f5f5;}
 <div class="card"><b>Portfolio Website</b><br>HTML/CSS Live</div>
 <div class="card"><b>Even/Odd Sum</b><br>2550 & 2500</div>
 <div class="card"><b>Palindrome Checker</b><br>Day 13 - Strings<br><input id="word" placeholder="Enter word - madam" style="padding:8px; width:90%; margin:5px 0; border-radius:6px; border:1px solid #ccc;"><br><button onclick="checkPal()" style="padding:8px 15px; background:blue; color:white; border:none; border-radius:6px; cursor:pointer;">Check</button><p id="palOut" style="font-weight:bold;"></p></div>
+ <div class="card"><b>Menu Calculator</b><br>Day 14 - Final Project<br><input id="n1" placeholder="Enter 1st number" style="padding:8px; width:90%; margin:5px 0; border-radius:6px; border:1px solid #ccc;"><br><input id="n2" placeholder="Enter 2nd number" style="padding:8px; width:90%; margin:5px 0; border-radius:6px; border:1px solid #ccc;"><br><button onclick="calc('add')" style="padding:6px 10px; background:blue; color:white; border:none; border-radius:6px; cursor:pointer; margin:2px;">+</button><button onclick="calc('sub')" style="padding:6px 10px; background:blue; color:white; border:none; border-radius:6px; cursor:pointer; margin:2px;">-</button><button onclick="calc('mul')" style="padding:6px 10px; background:blue; color:white; border:none; border-radius:6px; cursor:pointer; margin:2px;">*</button><button onclick="calc('div')" style="padding:6px 10px; background:blue; color:white; border:none; border-radius:6px; cursor:pointer; margin:2px;">/</button><p id="calcOut" style="font-weight:bold;"></p></div>
 </div>
 </section>
 
@@ -64,6 +65,18 @@ function checkPal(){
     document.getElementById("palOut").innerText = "Reversed: " + rev + " - Not Palindrome ❌";
     document.getElementById("palOut").style.color = "red";
   }
+}
+ function calc(op){
+  var a = parseFloat(document.getElementById("n1").value);
+  var b = parseFloat(document.getElementById("n2").value);
+  var res = "";
+  if(isNaN(a) || isNaN(b)){ document.getElementById("calcOut").innerText = "Enter both numbers!"; return; }
+  if(op == 'add') res = a + b;
+  if(op == 'sub') res = a - b;
+  if(op == 'mul') res = a * b;
+  if(op == 'div'){ if(b == 0){ document.getElementById("calcOut").innerText = "Cannot divide by zero!"; return; } res = (a / b).toFixed(2); }
+  document.getElementById("calcOut").innerText = "Result = " + res;
+  document.getElementById("calcOut").style.color = "green";
 }
 </script>
 
